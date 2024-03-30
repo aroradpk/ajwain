@@ -12,7 +12,9 @@ const app = express();
 const PORT = process.env.PORT;
 
 
-app.use(cors())
+app.use(cors({
+    origin: 'https://ajwain.netlify.app'
+}))
 app.use(express.json());
 app.use('/api',userRoutes);
 app.use('/api',issueRoutes);
